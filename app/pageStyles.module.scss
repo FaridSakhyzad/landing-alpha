@@ -1,0 +1,129 @@
+@import 'common';
+
+.section {
+  margin-bottom: 128px;
+}
+
+.sectionHeader {
+  margin: 0 0 64px 0;
+}
+
+.sectionLabel {
+  color: var(--primary-plain-color);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.sectionPara {
+  color: var(--text-secondary-color);
+}
+
+.section_whyIncentive {
+  background: linear-gradient(79.96deg, #5925DC 3.47%, rgba(89, 37, 220, 0) 91.63%), linear-gradient(81.81deg, rgba(122, 90, 248, 0) 3.24%, #7A5AF8 101.45%), #6938EF;
+  border-radius: 32px;
+  padding: 64px;
+
+  .sectionHeader {
+    text-align: center;
+    color: var(--primary-solid-color);
+  }
+
+  .sectionLabel {
+    color: var(--primary-solid-color);
+  }
+
+  .sectionPara {
+    color: var(--primary-solid-color);
+  }
+}
+
+.section_joinedCompanies {
+  .sectionHeader {
+    text-align: center;
+  }
+}
+
+.section_pricing {
+  background-color: var(--background-level-1-color);
+  border-radius: 64px;
+  padding: 64px 64px 128px 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .sectionHeader {
+    text-align: center;
+  }
+}
+
+.section_activities {
+  overflow: hidden;
+
+  .sectionHeader {
+    display: flex;
+  }
+}
+
+.sectionHeader_activitiesCol {
+  flex: 1 1 0;
+}
+
+@media (width < $laptopSmall) {
+  .section {
+    margin-bottom: 64px;
+  }
+
+  .sectionHeader {
+    margin: 0 0 32px 0;
+  }
+
+  .sectionLabel {
+    font-size: 14px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    margin-bottom: 8px;
+  }
+
+  .section_whyIncentive {
+    padding: 32px 16px 40px 16px;
+  }
+
+  .section_pricing {
+    border-radius: 32px;
+    padding: 64px 32px;
+  }
+}
+
+@media (width < $tablet) {
+  .sectionLabel {
+    text-align: center;
+  }
+
+  .sectionTitle {
+    text-align: center;
+  }
+
+  .sectionPara {
+    text-align: center;
+  }
+
+  .section_whyIncentive {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .section_pricing {
+    border-radius: 32px;
+    padding: 64px 16px 32px 16px;
+  }
+}

@@ -5,6 +5,10 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+
+  h1 {
+    outline: 1px solid red;
+  }
 }
 
 .description {

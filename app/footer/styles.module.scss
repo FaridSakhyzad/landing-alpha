@@ -1,0 +1,166 @@
+@import '../common';
+
+.footer {
+  padding-top: 64px;
+}
+
+.content {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.contentText {
+  flex: 4.2 4.2 0;
+}
+
+.contentMenu {
+  flex: 8.6 8.6 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.logo {
+  display: block;
+  width: 160px;
+  height: 40px;
+  background: url("../../public/logo.svg") center left;
+  margin-bottom: 32px;
+}
+
+.contentTextPara {
+  color: var(--text-secondary-color);
+  margin-bottom: 32px;
+}
+
+.appLinks {
+  display: flex;
+  gap: 16px;
+}
+
+.appLink {
+  display: block;
+  width: 132px;
+  height: 44px;
+  background: #000;
+  border-radius: 7px;
+}
+
+.appLinkAppStore {
+  background-image: url("../../public/pic--app-store-white.svg");
+}
+
+.appLinkGooglePlay {
+  background-image: url("../../public/pic--google-play-white.svg");
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menuItem {
+  display: block;
+}
+
+.footerBottom {
+  border-top: 1px solid #D2D6DB;
+  padding: 32px 0 48px 0;
+  display: flex;
+  align-items: center;
+}
+
+.copyrights {
+  color: var(--text-secondary-color);
+}
+
+.media {
+  display: flex;
+  gap: 24px;
+  margin-left: auto;
+}
+
+.mediaLink {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: #111927;
+}
+
+.mediaLinkTwitter {
+  background: url("../../public/icon--social-twitter.svg") center center no-repeat;
+}
+
+.mediaLinkLinkedin {
+  background: url("../../public/icon--social-linkedin.svg") center center no-repeat;
+}
+
+.mediaLinkFacebook {
+  background: url("../../public/icon--social-facebook.svg") center center no-repeat;
+}
+
+@media (width < $laptopSmall) {
+  .footer {
+    padding: 0;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .contentText {
+    flex: 1 1 0;
+  }
+
+  .contentMenu {
+    flex: 1 1 0;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 16px;
+  }
+
+  .contentTextPara {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copyrights {
+    margin-bottom: 16px;
+  }
+
+  .media {
+    margin: 0;
+  }
+}
+
+@media (width < $tablet) {
+  .content {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .menu {
+    font-size: 14px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .footerBottom {
+    padding: 32px 0;
+  }
+
+  .copyrights {
+    font-size: 14px;
+  }
+}

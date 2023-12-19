@@ -1,0 +1,25 @@
+.joinedCompanies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  overflow: hidden;
+}
+
+.joinedCompaniesBlock {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  animation: sliding 90s linear 0s infinite;
+  transform: translateX(0);
+  will-change: transform;
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

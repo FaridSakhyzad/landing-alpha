@@ -1,0 +1,162 @@
+@import '../common';
+
+.activities {
+  margin: 0 -16px;
+  display: flex;
+  width: 100%;
+
+  :global {
+    .slick-list {
+      overflow: unset;
+    }
+
+    .slick-slider {
+      position: relative;
+      padding-bottom: 56px;
+      width: 100%;
+    }
+
+    .slick-track {
+      min-width: 100%;
+      display: flex;
+    }
+
+    .slick-dots {
+      display: flex!important;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      position: absolute;
+      list-style-type: none;
+      padding: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      li {
+        width: 10px;
+        height: 10px;
+
+        button {
+          display: block;
+          text-indent: -9999px;
+          border: none;
+          padding: 0;
+          margin: 0;
+          width: 10px;
+          height: 10px;
+          background-color: var(--neutral-300-color);
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+
+      .slick-active {
+        button {
+          background-color: var(--primary-plain-color);
+        }
+      }
+    }
+  }
+}
+
+.activitiesSliderControls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: auto;
+}
+
+.activitiesSliderArrow {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--neutral-outlined-border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.activitiesSliderArrow_prev {
+  &:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background: url("../../public/icon--arrow-rounded.svg") center center no-repeat;
+  }
+}
+
+.activitiesSliderArrow_next {
+  &:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    background: url("../../public/icon--arrow-rounded.svg") center center no-repeat;
+    transform: scaleX(-1);
+  }
+}
+
+.activitiesSlide {
+  width: 392px!important;
+  padding: 0 16px;
+}
+
+.activitiesSlideImageBox {
+  height: 224px;
+  background-color: var(--background-level-1-color);
+  border-radius: 16px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.activitiesSlideImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.activitiesSlideTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.activitiesSlidePara {
+  color: var(--text-secondary-color);
+}
+
+@media (width < $laptopSmall) {
+  .activities {
+    :global {
+      .slick-slider {
+        padding-bottom: 42px;
+      }
+    }
+  }
+
+  .activitiesSlide {
+    width: 320px!important;
+  }
+
+  .activitiesSlideImageBox {
+    height: 200px;
+    margin-bottom: 8px;
+  }
+
+  .activitiesSlideTitle {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (width < $tablet) {
+  .activitiesSliderControls {
+    display: none;
+  }
+}

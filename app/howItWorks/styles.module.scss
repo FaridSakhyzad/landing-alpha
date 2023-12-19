@@ -1,0 +1,202 @@
+@import '../common';
+
+.howItWorks {
+  display: flex;
+  gap: 64px;
+  margin-bottom: 80px;
+}
+
+.howItWorksImageBox {
+  flex: 1 1 0;
+  position: relative;
+  display: flex;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 449px;
+    height: 580px;
+    background: url("../../public/img--phone-slide-3.png") center no-repeat;
+    background-size: contain;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+  }
+}
+
+.howItWorksImageBg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  fill: var(--background-level-1-color);
+}
+
+.howItWorksContent {
+  flex: 1 1 0;
+  padding: 30px 0;
+  min-width: 652px;
+
+  [class^="styles_accordionItemContent__"] {
+    padding-left: 48px;
+  }
+
+  :global(.active) {
+    .howItWorksIcon {
+      filter: contrast(0) brightness(3);
+    }
+  }
+}
+
+.howItWorksContentTitle {
+  display: flex;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+  align-items: center;
+}
+
+
+.howItWorksIcon {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: -1px 16px -1px 0;
+}
+
+.howItWorksIcon_participate {
+  background: url("../../public/icon--participate.svg") center center no-repeat;
+}
+
+.howItWorksIcon_recognitions {
+  background: url("../../public/icon--recognitions.svg") center center no-repeat;
+}
+
+.howItWorksIcon_communicate {
+  background: url("../../public/icon--communicate.svg") center center no-repeat;
+}
+
+.howItWorksIcon_rewards {
+  background: url("../../public/icon--rewards.svg") center center no-repeat;
+}
+
+.howItWorksContentPara {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.howItWorksMore {
+  display: flex;
+  gap: 36px;
+}
+
+.howItWorksMoreCol {
+  flex: 1 1 0;
+  border-radius: 16px;
+  background-color: var(--background-level-1-color);
+  padding: 32px;
+  text-align: center;
+}
+
+.howItWorksMoreItems {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 24px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.howItWorksMoreItem {
+  width: 56px;
+  height: 56px;
+  border: 3px solid var(--background-level-1-color);
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.howItWorksMoreItemImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.howItWorksMoreTitle {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@media (width < $laptopLarge) {
+  .howItWorksMore {
+    gap: 16px;
+  }
+
+  .howItWorksMoreCol {
+    padding: 16px;
+  }
+}
+
+@media (width < $laptopSmall) {
+  .howItWorks {
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .howItWorksImageBox {
+    &:before {
+      width: 281px;
+      height: 364px;
+    }
+  }
+
+  .howItWorksContent {
+    min-width: 379px;
+    padding: 0;
+  }
+
+  .howItWorksContentTitle {
+    font-size: 16px;
+  }
+
+  .howItWorksContentPara {
+    font-size: 14px;
+  }
+
+  .howItWorksMoreItems {
+    gap: 0;
+    margin-bottom: 16px;
+  }
+
+  .howItWorksMoreItem {
+    width: 48px;
+    height: 48px;
+
+    & + & {
+      margin-left: -12px;
+    }
+  }
+
+  .howItWorksMoreTitle {
+    font-size: 16px;
+  }
+}
+
+@media (width < $tablet) {
+  .howItWorks {
+    flex-direction: column;
+  }
+
+  .howItWorksContent {
+    min-width: unset;
+  }
+
+  .howItWorksMore {
+    flex-direction: column;
+  }
+}

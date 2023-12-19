@@ -1,0 +1,313 @@
+@import '../common';
+
+.hero {
+  padding: 80px 0;
+  display: flex;
+  gap: 80px;
+  margin-bottom: 80px;
+}
+
+.col {
+  flex: 1 1 0;
+  display: flex;
+}
+
+.col_text {
+  flex-direction: column;
+}
+
+.mainText {
+  margin: auto 0;
+}
+
+.textTitle {
+  font-size: 48px;
+  line-height: 1.33;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.textTitleAccent {
+  color: var(--primary-plain-color);
+}
+
+.textTitleAccentWithSmudge {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -26px;
+    width: 100%;
+    height: 18px;
+    background: url("../../public/pic--hero-smudge.svg") center bottom no-repeat;
+    background-size: contain;
+  }
+}
+
+.textPara {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  color: var(--text-secondary-color);
+}
+
+.usersCount {
+  margin-top: auto;
+}
+
+.activeUsers {
+  display: flex;
+  align-items: center;
+}
+
+.activeUsersList {
+  display: flex;
+  gap: 10px;
+  margin-right: 24px;
+}
+
+.activeUser {
+  width: 48px;
+  height: 48px;
+  background-color: var(--background-level-1-color);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.activeUserImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.activeUsersInfo {}
+
+.activeUsersCount {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--primary-plain-color);
+}
+
+.activeUsersTitle {}
+
+.imageBox {
+  background: linear-gradient(79.96deg, #5925DC 3.47%, rgba(89, 37, 220, 0) 91.63%), linear-gradient(81.81deg, rgba(122, 90, 248, 0) 3.24%, #7A5AF8 101.45%), #6938EF;
+  border-radius: 32px;
+  height: 760px;
+  width: 487px;
+  margin: auto 0 auto auto;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 44px;
+    bottom: 94px;
+    background-image: url("../../public/bg--hero-image-bg-1.svg");
+    width: 128px;
+    height: 108px;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 162px;
+    background-image: url("../../public/bg--hero-image-bg-2.svg");
+    width: 98px;
+    height: 108px;
+  }
+}
+
+.appLinkBox {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appLink {
+  display: block;
+  width: 132px;
+  height: 44px;
+  background-color: #fff;
+  border-radius: 7px;
+}
+
+.appLinkAppStore {
+  background: #fff url("../../public/pic--app-store.svg") center left no-repeat;
+  background-size: contain;
+}
+
+.appLinkGooglePlay {
+  background: #fff url("../../public/pic--google-play.svg") center left no-repeat;
+  background-size: contain;
+}
+
+.image1 {
+  width: 281px;
+  height: 580px;
+  position: absolute;
+  top: 29px;
+  left: -139px;
+  background: url("../../public/img--phone-slide-1.png") center center no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+.image2 {
+  width: 281px;
+  height: 580px;
+  position: absolute;
+  bottom: -32px;
+  right: -32px;
+  background: url("../../public/img--phone-slide-2.png") center center no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+@media (width < $laptopSmall) {
+  .hero {
+    padding: 40px 0;
+    gap: 0;
+    margin-bottom: 32px;
+  }
+
+  .col_text {
+    flex: 444 444 0;
+    padding-right: 32px;
+  }
+
+  .col_image {
+    flex: 390 390 0;
+  }
+
+  .textTitle {
+    font-size: 30px;
+  }
+
+  .activeUsersCount {
+
+  }
+
+  .activeUsersTitle {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .imageBox {
+    width: 326px;
+    height: 503px;
+    border-radius: 16px;
+
+    &:before {
+      width: 90px;
+      height: 76px;
+      left: 103px;
+      bottom: 98px;
+    }
+
+    &:after {
+      width: 83px;
+      height: 76px;
+      right: 0;
+      top: 116px;
+    }
+  }
+
+  .appLinkBox {
+    top: 16px;
+    right: 16px;
+    gap: 8px;
+  }
+
+  .appLink {
+    width: 84px;
+    height: 28px;
+  }
+
+  .image1 {
+    width: 171px;
+    height: 353px;
+    left: -16px;
+    top: 16px;
+  }
+
+  .image2 {
+    width: 171px;
+    height: 353px;
+    bottom: -16px;
+    right: -16px;
+  }
+}
+
+@media (width < $tablet) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .col_text {
+    flex: 1 1 0;
+    padding: 0;
+    text-align: center;
+    margin: 0 0 64px 0;
+  }
+
+  .mainText {
+    margin-bottom: 32px;
+  }
+
+  .textTitle {
+    font-size: 30px;
+    line-height: 1.44;
+  }
+
+  .textTitleAccentWithSmudge {
+    &:after {
+      bottom: -8px;
+    }
+  }
+
+  .textPara {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .activeUsers {
+    flex-direction: column;
+  }
+
+  .activeUsersList {
+    margin: 0 0 8px 0;
+  }
+
+  .col_image {
+
+  }
+
+  .imageBox {
+    margin: 0 auto;
+  }
+
+  .image1 {
+    width: 171px;
+    height: 353px;
+    left: -16px;
+    top: 16px;
+  }
+
+  .image2 {
+    width: 171px;
+    height: 353px;
+    bottom: -16px;
+    right: -16px;
+  }
+}

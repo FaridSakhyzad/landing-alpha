@@ -1,0 +1,163 @@
+@import '../common';
+
+.header {
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--main-background-color);
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  display: block;
+  width: 160px;
+  min-width: 160px;
+  height: 40px;
+  background: url("../../public/logo.svg") center left;
+  transition: all 0.2s ease;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.menuItem {
+  display: block;
+}
+
+.getStartedButton {
+  font-weight: 400;
+  background-color: var(--primary-plain-color);
+  color: var(--primary-solid-color);
+  line-height: 1;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-left: 40px;
+  transform-origin: center right;
+  transition: transform 0.2s ease;
+}
+
+.getStartedButton_hidden {
+  transform: scaleX(0);
+}
+
+.sandwichMenuButton {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid var(--neutral-outlined-border-color);
+  color: var(--neutral-outlined-color);
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  margin-left: 16px;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 18px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: currentColor;
+    transform-origin: center center;
+    transition: all 0.2s ease;
+  }
+
+  &:before {
+    top: 13px;
+  }
+
+  &:after {
+    bottom: 13px;
+  }
+}
+
+.sandwichMenuButtonBar {
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 18px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: currentColor;
+  transition: all 0.2s ease;
+}
+
+.sandwichMenuButton_active {
+  .sandwichMenuButtonBar {
+    transform: scale(1.5, 0);
+  }
+
+  &:before {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  &:after {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+}
+
+@media (width < $laptopSmall) {
+  .header {
+    :global {
+      .container {
+        padding: 0 24px;
+      }
+    }
+  }
+
+  .logo {
+    width: 40px;
+    min-width: 40px;
+    margin-right: 90px;
+  }
+
+  .logo_active {
+    width: 160px;
+    min-width: 160px;
+  }
+
+  .menu {
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .getStartedButton {
+    margin-left: 18px;
+  }
+}
+
+@media (width < $tablet) {
+  .menu {
+    display: none;
+  }
+
+  .getStartedButton {
+    margin-left: auto;
+  }
+
+  .sandwichMenuButton {
+    display: block;
+  }
+}

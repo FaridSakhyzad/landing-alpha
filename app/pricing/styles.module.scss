@@ -1,0 +1,265 @@
+@import '../common';
+
+.pricing {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.pricingBlock {
+  flex: 1 1 0;
+  background-color: white;
+  padding: 24px 32px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricingBlockHeader {
+  margin-bottom: 24px;
+}
+
+.pricingName {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-secondary-color);
+  margin: 0 0 8px 0;
+}
+
+.pricingPrice {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.pricingPriceText {
+  font-size: 16px;
+  font-weight: 300;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.pricingDescription {
+  color: var(--text-secondary-color);
+}
+
+.pricingFeaturesList {
+  margin-bottom: 24px;
+}
+
+.pricingFeaturesItem {
+  display: block;
+  padding: 0 0 0 28px;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--success-600-color) url("../../public/icon--checkmark.svg") center center no-repeat;
+    position: absolute;
+    left: 0;
+    top: 4px;
+  }
+}
+
+.pricingChooseButton {
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.pricingNote {
+  text-align: center;
+  color: var(--text-secondary-color);
+}
+
+.pricingFaq {
+  max-width: 768px;
+  margin: 0 auto 128px auto;
+
+  [class^="styles_accordionItem__"] {
+    background-color: white;
+  }
+}
+
+.startForFree {
+  padding: 96px 64px 32px 64px;
+  background-color: #6938EF;
+  background-image: linear-gradient(79.96deg, #5925DC 3.47%, rgba(89, 37, 220, 0) 91.63%), linear-gradient(81.81deg, rgba(122, 90, 248, 0) 3.24%, #7A5AF8 101.45%);
+  border-radius: 32px;
+  position: relative;
+  z-index: 1;
+  min-height: 563px;
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+    width: 128px;
+    height: 80px;
+    background-image: url("../../public/bg--hero-image-bg-1.svg");
+    z-index: -2;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 243px;
+    right: 212px;
+    width: 128px;
+    height: 108px;
+    background-image: url("../../public/bg--hero-image-bg-2.svg");
+    z-index: -2;
+  }
+}
+
+.startForFreeBg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: auto;
+  width: 785px;
+  aspect-ratio: 785 / 341;
+  background: url("../../public/img--phone-slide-4.png") top center no-repeat;
+  background-size: contain;
+}
+
+.startForFreeTitle {
+  text-align: center;
+  color: var(--primary-solid-color);
+  margin-bottom: 16px;
+}
+
+.startForFreePara {
+  font-size: 20px;
+  color: var(--primary-200-color);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.startForFreeButton {
+  display: table;
+  margin: auto auto 0 auto;
+}
+
+
+@media (width < $laptopSmall) {
+  .pricing {
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 auto 64px auto;
+    max-width: 420px;
+  }
+
+  .pricingBlock {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .pricingBlockHeader {
+    margin-bottom: 24px;
+  }
+
+
+  .pricingName {
+    text-align: center;
+    font-size: 16px;
+    margin: 0 0 4px 0;
+  }
+
+  .pricingPrice {
+    font-size: 24px;
+    margin: 0 0 4px 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pricingPriceText {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .pricingDescription {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .pricingFeaturesList {
+    margin-bottom: 64px;
+  }
+
+  .pricingFeaturesItem {
+    font-size: 14px;
+
+    &:before {
+      top: 2px;
+    }
+  }
+
+  .startForFree {
+    padding: 48px 16px 16px 16px;
+    min-height: 334px;
+    overflow: hidden;
+
+    &:before {
+      left: -14px;
+      bottom: -10px;
+    }
+
+    &:after {
+      top: unset;
+      right: -8px;
+      bottom: 101px;
+    }
+  }
+
+  .startForFreeTitle {
+    font-size: 24px;
+    line-height: 1.42;
+  }
+
+  .startForFreePara {
+    font-size: 16px;
+  }
+
+  .startForFreeBg {
+    width: 100%;
+    max-width: 373px;
+  }
+}
+
+
+@media (width < $laptopSmall) {
+  .pricingFaq {
+    margin-bottom: 64px;
+  }
+
+  .startForFree {
+    border-radius: 16px;
+    padding: 48px 16px 16px 16px;
+
+    &:after {
+      width: 90px;
+      height: 76px;
+    }
+  }
+
+  .startForFreeTitle {
+    margin-bottom: 8px;
+  }
+}
