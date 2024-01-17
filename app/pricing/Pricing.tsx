@@ -163,11 +163,13 @@ export default function Pricing() {
       </div>
 
       <div className={styles.pricingFaq}>
-        <Accordion items={accData} />
+        <Accordion items={accData} onActiveItemChange={(index: number) => {}} />
       </div>
 
       <div className={styles.startForFree}>
-        <div className={styles.startForFreeBg} />
+        <div className={styles.startForFreeImage1} />
+        <div className={styles.startForFreeImage2} />
+        <div className={styles.startForFreeImage3} />
         <h2 className={styles.startForFreeTitle}>Start for free now</h2>
         <p className={styles.startForFreePara}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <a href="#" className={`button ${styles.startForFreeButton}`}>Get Started</a>

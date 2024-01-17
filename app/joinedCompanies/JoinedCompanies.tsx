@@ -4,17 +4,17 @@ import pageStyles from "@/app/pageStyles.module.scss";
 export default function JoinedCompanies() {
   const Companies = () => (
     <div className={styles.joinedCompaniesBlock}>
-      <img src="/pic-joined-logo-1.jpg" />
-      <img src="/pic-joined-logo-2.jpg" />
-      <img src="/pic-joined-logo-3.jpg" />
-      <img src="/pic-joined-logo-4.jpg" />
-      <img src="/pic-joined-logo-5.jpg" />
-      <img src="/pic-joined-logo-6.jpg" />
-      <img src="/pic-joined-logo-7.jpg" />
-      <img src="/pic-joined-logo-8.jpg" />
-      <img src="/pic-joined-logo-9.jpg" />
-      <img src="/pic-joined-logo-10.jpg" />
-      <img src="/pic-joined-logo-11.jpg" />
+      <img src="/pic-joined-logo-1.svg" alt="" />
+      <img src="/pic-joined-logo-2.svg" alt="" />
+      <img src="/pic-joined-logo-3.svg" alt="" />
+      <img src="/pic-joined-logo-4.svg" alt="" />
+      <img src="/pic-joined-logo-5.svg" alt="" />
+      <img src="/pic-joined-logo-6.svg" alt="" />
+      <img src="/pic-joined-logo-7.svg" alt="" />
+      <img src="/pic-joined-logo-8.svg" alt="" />
+      <img src="/pic-joined-logo-9.svg" alt="" />
+      <img src="/pic-joined-logo-10.svg" alt="" />
+      <img src="/pic-joined-logo-11.svg" alt="" />
     </div>
   );
 

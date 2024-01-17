@@ -13,6 +13,14 @@
   border-radius: 16px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  border: 2px solid transparent;
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+
+  &:hover {
+    border-color: var(--primary-plain-color);
+    box-shadow: 0 24px 20px -4px rgba(16, 24, 40, 0.1);
+  }
 }
 
 .pricingBlockHeader {
@@ -100,6 +108,7 @@
   min-height: 563px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   &:before {
     content: '';
@@ -110,7 +119,7 @@
     width: 128px;
     height: 80px;
     background-image: url("../../public/bg--hero-image-bg-1.svg");
-    z-index: -2;
+    z-index: -10;
   }
 
   &:after {
@@ -122,21 +131,69 @@
     width: 128px;
     height: 108px;
     background-image: url("../../public/bg--hero-image-bg-2.svg");
-    z-index: -2;
+    z-index: -10;
+  }
+
+  &:hover {
+    .startForFreeImage1 {
+      rotate: -10deg;
+      translate: -247px -36px;
+    }
+
+    .startForFreeImage2 {
+      translate: 0 -36px;
+    }
+
+    .startForFreeImage3 {
+      rotate: 10deg;
+      translate: 247px -36px;
+    }
   }
 }
 
-.startForFreeBg {
+.startForFreeImage1,
+.startForFreeImage2,
+.startForFreeImage3 {
+  transition: rotate 0.3s ease-in, translate 0.3s ease-in;
+}
+
+
+.startForFreeImage1 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  z-index: -1;
+  bottom: -318px;
   margin: auto;
-  width: 785px;
-  aspect-ratio: 785 / 341;
-  background: url("../../public/img--phone-slide-4.png") top center no-repeat;
-  background-size: contain;
+  width: 291px;
+  height: 600px;
+  z-index: -5;
+  background: url("../../public/img--start-free-1.png") center center / contain no-repeat;
+  translate: -247px 0;
+}
+
+.startForFreeImage2 {
+  position: absolute;
+  width: 333px;
+  height: 688px;
+  left: 0;
+  right: 0;
+  bottom: -350px;
+  margin: auto;
+  z-index: -1;
+  background: url("../../public/img--start-free-2.png") center center / contain no-repeat;
+}
+
+.startForFreeImage3 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -318px;
+  margin: auto;
+  width: 291px;
+  height: 600px;
+  z-index: -5;
+  background: url("../../public/img--start-free-3.png") center center / contain no-repeat;
+  translate: 247px 0;
 }
 
 .startForFreeTitle {
@@ -226,6 +283,40 @@
       right: -8px;
       bottom: 101px;
     }
+
+    &:hover {
+      .startForFreeImage1 {
+        translate: -115px -12px;
+      }
+
+      .startForFreeImage2 {
+        translate: 0 -12px;
+      }
+
+      .startForFreeImage3 {
+        translate: 115px -12px;
+      }
+    }
+  }
+
+  .startForFreeImage1 {
+    width: 138px;
+    height: 285px;
+    bottom: -137px;
+    translate: -115px 0;
+  }
+
+  .startForFreeImage2 {
+    width: 158px;
+    height: 327px;
+    bottom: -147px;
+  }
+
+  .startForFreeImage3 {
+    width: 138px;
+    height: 285px;
+    bottom: -137px;
+    translate: 115px 0;
   }
 
   .startForFreeTitle {

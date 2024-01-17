@@ -10,12 +10,14 @@ interface IItem {
 
 interface IProps {
   items: IItem[]
+  onActiveItemChange: (index: number) => void
 }
 
-export default function Accordion ({ items }: IProps) {
+export default function Accordion ({ items, onActiveItemChange = () => {} }: IProps) {
   const [ activeItemIdx, setActiveItemIdx ] = useState(0);
   const handleAccHeaderClick = (e: React.SyntheticEvent, index: number) => {
     setActiveItemIdx(index);
+    onActiveItemChange(index);
   };
 
   return (

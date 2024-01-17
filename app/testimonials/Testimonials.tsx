@@ -14,7 +14,7 @@ export default function Testimonials() {
     dots: true,
     infinite: false,
     arrows: true,
-    fade: true,
+    //fade: true,
     variableWidth: false,
     speed: 500,
     slidesToShow: 1,
@@ -35,7 +35,10 @@ export default function Testimonials() {
             <Slider {...settings} ref={sliderRef}>
               <div className={styles.testimonialsItem}>
                 <div className={styles.testimonialsImageBox}>
-                  <img  className={styles.testimonialsImage} src="/img--testimonials-1.jpg" alt="" />
+                  <div className={styles.testimonialsLogoBox}>
+                    <img src="/pic--testimonials-logo-db.svg" alt="" className={styles.testimonialsLogo} />
+                  </div>
+                  <img className={styles.testimonialsImage} src="/img--testimonials-1.jpg" alt="" />
                 </div>
                 <div className={styles.testimonialsContent}>
                   <div className={styles.stars}>
@@ -55,6 +58,9 @@ export default function Testimonials() {
 
               <div className={styles.testimonialsItem}>
                 <div className={styles.testimonialsImageBox}>
+                  <div className={styles.testimonialsLogoBox}>
+                    <img src="/pic--testimonials-logo-db.svg" alt="" className={styles.testimonialsLogo} />
+                  </div>
                   <img className={styles.testimonialsImage} src="/img--testimonials-2.jpg" alt="" />
                 </div>
                 <div className={styles.testimonialsContent}>
@@ -75,7 +81,33 @@ export default function Testimonials() {
 
               <div className={styles.testimonialsItem}>
                 <div className={styles.testimonialsImageBox}>
+                  <div className={styles.testimonialsLogoBox}>
+                    <img src="/pic--testimonials-logo-db.svg" alt="" className={styles.testimonialsLogo} />
+                  </div>
                   <img className={styles.testimonialsImage} src="/img--testimonials-3.jpg" alt="" />
+                </div>
+                <div className={styles.testimonialsContent}>
+                  <div className={styles.stars}>
+                    <Stars rating={4.5} />
+                  </div>
+                  <blockquote>
+                    <div className={styles.testimonialsText}>
+                      <p>3 Love the simplicity of the service and the prompt customer support. We can’t imagine working without it.</p>
+                    </div>
+                    <cite>
+                      <span className={styles.testimonialsAuthor}>— Olivia Rhye</span>
+                      <span className={styles.testimonialsAuthorTitle}>Head of Design, Dropbox</span>
+                    </cite>
+                  </blockquote>
+                </div>
+              </div>
+
+              <div className={styles.testimonialsItem}>
+                <div className={styles.testimonialsImageBox}>
+                  <div className={styles.testimonialsLogoBox}>
+                    <img src="/pic--testimonials-logo-db.svg" alt="" className={styles.testimonialsLogo} />
+                  </div>
+                  <img className={styles.testimonialsImage} src="/img--testimonials-4.jpg" alt="" />
                 </div>
                 <div className={styles.testimonialsContent}>
                   <div className={styles.stars}>

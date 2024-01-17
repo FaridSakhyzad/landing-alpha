@@ -11,6 +11,15 @@
   padding: 32px 24px;
   background-color: var(--primary-200-color);
   border-radius: 16px;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-100-color);
+
+    .whyIncentiveIconBg {
+      rotate: 15deg;
+    }
+  }
 }
 
 .whyIncentiveIcon {
@@ -35,19 +44,20 @@
     backdrop-filter: blur(8px);
     z-index: 2;
   }
+}
 
-  &:after {
-    border-radius: 12px;
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: -10px;
-    left: 10px;
-    background-color: var(--primary-plain-color);
-    z-index: -1;
-  }
+.whyIncentiveIconBg {
+  border-radius: 12px;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -10px;
+  left: 10px;
+  background-color: var(--primary-plain-color);
+  z-index: -1;
+  transition: rotate 0.3s ease-in-out;
 }
 
 .whyIncentiveIcon_engagement {

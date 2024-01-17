@@ -15,8 +15,17 @@ export default function Activities () {
     arrows: false,
     variableWidth: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 834,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ],
   };
 
   const sliderRef = useRef(null);
@@ -50,7 +59,7 @@ export default function Activities () {
           <Slider {...settings} ref={sliderRef}>
             <div className={styles.activitiesSlide}>
               <div className={styles.activitiesSlideImageBox}>
-                <img className={styles.activitiesSlideImage} src="/img--activities-0.jpg" alt="" />
+                <img className={styles.activitiesSlideImage} src="/img--challenges-1.png" alt="" />
               </div>
 
               <h3 className={styles.activitiesSlideTitle}>Step Challenges</h3>
@@ -59,7 +68,7 @@ export default function Activities () {
 
             <div className={styles.activitiesSlide}>
               <div className={styles.activitiesSlideImageBox}>
-                <img className={styles.activitiesSlideImage} src="/img--activities-1.jpg" alt="" />
+                <img className={styles.activitiesSlideImage} src="/img--challenges-2.png" alt="" />
               </div>
 
               <h3 className={styles.activitiesSlideTitle}>Meditation Club</h3>
@@ -68,7 +77,7 @@ export default function Activities () {
 
             <div className={styles.activitiesSlide}>
               <div className={styles.activitiesSlideImageBox}>
-                <img className={styles.activitiesSlideImage} src="/img--activities-2.jpg" alt="" />
+                <img className={styles.activitiesSlideImage} src="/img--challenges-3.png" alt="" />
               </div>
 
               <h3 className={styles.activitiesSlideTitle}>Photo Challenge</h3>
@@ -77,7 +86,7 @@ export default function Activities () {
 
             <div className={styles.activitiesSlide}>
               <div className={styles.activitiesSlideImageBox}>
-                <img className={styles.activitiesSlideImage} src="/img--activities-3.jpg" alt="" />
+                <img className={styles.activitiesSlideImage} src="/img--challenges-4.png" alt="" />
               </div>
 
               <h3 className={styles.activitiesSlideTitle}>Squat Challenge</h3>
@@ -85,7 +94,7 @@ export default function Activities () {
             </div>
             <div className={styles.activitiesSlide}>
               <div className={styles.activitiesSlideImageBox}>
-                <img className={styles.activitiesSlideImage} src="/img--activities-4.jpg" alt="" />
+                <img className={styles.activitiesSlideImage} src="/img--challenges-5.png" alt="" />
               </div>
 
               <h3 className={styles.activitiesSlideTitle}>Challenge</h3>
@@ -93,7 +102,7 @@ export default function Activities () {
             </div>
             <div className={styles.activitiesSlide}>
               <div className={styles.activitiesSlideImageBox}>
-                <img className={styles.activitiesSlideImage} src="/img--activities-5.jpg" alt="" />
+                <img className={styles.activitiesSlideImage} src="/img--challenges-6.png" alt="" />
               </div>
 
               <h3 className={styles.activitiesSlideTitle}>Challenge</h3>
@@ -101,7 +110,7 @@ export default function Activities () {
             </div>
             <div className={styles.activitiesSlide}>
               <div className={styles.activitiesSlideImageBox}>
-                <img className={styles.activitiesSlideImage} src="/img--activities-6.jpg" alt="" />
+                <img className={styles.activitiesSlideImage} src="/img--challenges-7.png" alt="" />
               </div>
 
               <h3 className={styles.activitiesSlideTitle}>Challenge</h3>
@@ -109,7 +118,7 @@ export default function Activities () {
             </div>
             <div className={styles.activitiesSlide}>
               <div className={styles.activitiesSlideImageBox}>
-                <img className={styles.activitiesSlideImage} src="/img--activities-7.jpg" alt="" />
+                <img className={styles.activitiesSlideImage} src="/img--challenges-8.png" alt="" />
               </div>
 
               <h3 className={styles.activitiesSlideTitle}>Challenge</h3>
