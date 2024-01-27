@@ -82,6 +82,7 @@
 .pricingChooseButton {
   margin-top: auto;
   margin-bottom: 12px;
+  padding: 16px;
 }
 
 .pricingNote {
@@ -96,6 +97,12 @@
   [class^="styles_accordionItem__"] {
     background-color: white;
   }
+}
+
+.pricingFaqTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .startForFree {

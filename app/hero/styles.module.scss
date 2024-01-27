@@ -91,7 +91,10 @@
   color: var(--primary-plain-color);
 }
 
-.activeUsersTitle {}
+.activeUsersTitle {
+  font-size: 16px;
+  font-weight: normal;
+}
 
 .imageBox {
   background: linear-gradient(79.96deg, #5925DC 3.47%, rgba(89, 37, 220, 0) 91.63%), linear-gradient(81.81deg, rgba(122, 90, 248, 0) 3.24%, #7A5AF8 101.45%), #6938EF;

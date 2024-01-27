@@ -65,16 +65,27 @@
   gap: 16px;
   align-items: center;
   margin: auto;
+  width: 112px;
+  max-width: 112px;
+  justify-content: flex-end;
 }
 
 .activitiesSliderArrow {
   display: flex;
   width: 48px;
   height: 48px;
-  border: 1px solid var(--neutral-outlined-border-color);
-  border-radius: 50%;
+  min-width: 48px;
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.1);
+  border-radius: 24px;
   cursor: pointer;
   position: relative;
+  transition: width 0.3s ease, min-width 0.3s ease;
+
+  &:hover {
+    min-width: 84px;
+    width: 84px;
+    background-color: var(--neutral-500-color);
+  }
 }
 
 .activitiesSliderArrow_prev {

@@ -98,9 +98,11 @@ html {
   --primary-200-color: #D9D6FE;
   --primary-300-color: #BDB4FE;
   --primary-500-color: #7A5AF8;
+  --primary-700-color: #5925DC;
   --success-600-color: #039855;
   --success-300-color: #6CE9A6;
   --neutral-300-color: #D2D6DB;
+  --neutral-500-color: #F9FAFB;
   --neutral-outlined-border-color: #D2D6DB;
   --neutral-soft-bg: #F3F4F6;
   --neutral-800-color: #171A1C;

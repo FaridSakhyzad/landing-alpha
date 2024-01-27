@@ -5,7 +5,7 @@ import Accordion from '../accordion';
 export default function Pricing() {
   const accData = [
     {
-      header: 'How does the free version work?',
+      header: (<h3 className={styles.pricingFaqTitle}>How does the free version work?</h3>),
       content: (
         <>
           <p>Incentive incentivizes employees to engage in team building activities such as challenges, events and initiatives.</p>
@@ -15,7 +15,7 @@ export default function Pricing() {
       )
     },
     {
-      header: 'What happens when more than 30 members join my app?',
+      header: (<h3 className={styles.pricingFaqTitle}>What happens when more than 30 members join my app?</h3>),
       content: (
         <>
           <p>Incentive incentivizes employees to engage in team building activities such as challenges, events and initiatives.</p>
@@ -25,7 +25,7 @@ export default function Pricing() {
       )
     },
     {
-      header: 'Which premium plan is right for me?',
+      header: (<h3 className={styles.pricingFaqTitle}>Which premium plan is right for me?</h3>),
       content: (
         <>
           <p>Incentive incentivizes employees to engage in team building activities such as challenges, events and initiatives.</p>
@@ -35,7 +35,7 @@ export default function Pricing() {
       )
     },
     {
-      header: 'Can i increase the rewards budget?',
+      header: (<h3 className={styles.pricingFaqTitle}>Can i increase the rewards budget?</h3>),
       content: (
         <>
           <p>Incentive incentivizes employees to engage in team building activities such as challenges, events and initiatives.</p>
@@ -45,7 +45,7 @@ export default function Pricing() {
       )
     },
     {
-      header: 'What languages are supported by the app?',
+      header: (<h3 className={styles.pricingFaqTitle}>What languages are supported by the app?</h3>),
       content: (
         <>
           <p>Incentive incentivizes employees to engage in team building activities such as challenges, events and initiatives.</p>
@@ -55,7 +55,7 @@ export default function Pricing() {
       )
     },
     {
-      header: 'After purchase, can i change/cancel plan?',
+      header: (<h3 className={styles.pricingFaqTitle}>After purchase, can i change/cancel plan?</h3>),
       content: (
         <>
           <p>Incentive incentivizes employees to engage in team building activities such as challenges, events and initiatives.</p>
@@ -65,7 +65,7 @@ export default function Pricing() {
       )
     },
     {
-      header: 'Do you provide customer support?',
+      header: (<h3 className={styles.pricingFaqTitle}>Do you provide customer support?</h3>),
       content: (
         <>
           <p>Incentive incentivizes employees to engage in team building activities such as challenges, events and initiatives.</p>

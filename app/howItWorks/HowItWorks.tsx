@@ -9,7 +9,7 @@ export default function HowItWorks () {
     {
       header: (
         <h3 className={styles.howItWorksContentTitle}>
-          <i className={`${styles.howItWorksIcon} ${styles.howItWorksIcon_participate}`} />
+          <i className={`accordionItemHeaderFrontIcon ${styles.howItWorksIcon} ${styles.howItWorksIcon_participate}`} />
           <span>Participate in Challenges</span>
         </h3>
       ),
@@ -20,7 +20,7 @@ export default function HowItWorks () {
     {
       header: (
         <h3 className={styles.howItWorksContentTitle}>
-          <i className={`${styles.howItWorksIcon} ${styles.howItWorksIcon_recognitions}`} />
+          <i className={`accordionItemHeaderFrontIcon ${styles.howItWorksIcon} ${styles.howItWorksIcon_recognitions}`} />
           <span>Make a Recognitions</span>
         </h3>
       ),
@@ -33,7 +33,7 @@ export default function HowItWorks () {
     {
       header: (
         <h3 className={styles.howItWorksContentTitle}>
-          <i className={`${styles.howItWorksIcon} ${styles.howItWorksIcon_communicate}`} />
+          <i className={`accordionItemHeaderFrontIcon ${styles.howItWorksIcon} ${styles.howItWorksIcon_communicate}`} />
           <span>Communicate with Temmates</span>
         </h3>
       ),
@@ -46,7 +46,7 @@ export default function HowItWorks () {
     {
       header: (
         <h3 className={styles.howItWorksContentTitle}>
-          <i className={`${styles.howItWorksIcon} ${styles.howItWorksIcon_rewards}`} />
+          <i className={`accordionItemHeaderFrontIcon ${styles.howItWorksIcon} ${styles.howItWorksIcon_rewards}`} />
           <span>Get Rewards</span>
         </h3>
       ),

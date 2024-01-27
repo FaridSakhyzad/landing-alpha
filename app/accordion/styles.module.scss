@@ -10,7 +10,24 @@
   padding: 24px 32px;
   background: var(--background-level-1-color);
   border-radius: 16px;
-  transition: background 500ms ease;
+  transition: background 500ms ease, color 500ms ease;
+  position: relative;
+  overflow: hidden;
+
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(79.96deg, #5925DC 3.47%, rgba(89, 37, 220, 0) 91.63%), linear-gradient(81.81deg, rgba(122, 90, 248, 0) 3.24%, #7A5AF8 101.45%), #6938EF;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+  }
 
   &:global(.active) {
     background: linear-gradient(79.96deg, #5925DC 3.47%, rgba(89, 37, 220, 0) 91.63%), linear-gradient(81.81deg, rgba(122, 90, 248, 0) 3.24%, #7A5AF8 101.45%), #6938EF;
@@ -23,6 +40,19 @@
     .accordionItemContentBox {
       grid-template-rows: 1fr;
       padding-top: 8px;
+    }
+  }
+
+  &:hover {
+    color: var(--primary-solid-color);
+
+    &:before {
+      opacity: 1;
+    }
+
+    :global(.accordionItemHeaderFrontIcon),
+    .accordionItemHeaderIcon {
+      filter: contrast(0) brightness(3);
     }
   }
 }
@@ -53,6 +83,7 @@
   display: grid;
   grid-template-rows: 0fr;
   padding-top: 0;
+  position: relative;
   transition: padding 300ms ease, grid-template-rows 300ms ease;
 }
 

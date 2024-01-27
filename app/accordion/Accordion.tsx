@@ -14,8 +14,14 @@ interface IProps {
 }
 
 export default function Accordion ({ items, onActiveItemChange = () => {} }: IProps) {
-  const [ activeItemIdx, setActiveItemIdx ] = useState(0);
+  const [ activeItemIdx, setActiveItemIdx ] = useState<number | null>(0);
   const handleAccHeaderClick = (e: React.SyntheticEvent, index: number) => {
+    if (index === activeItemIdx) {
+      setActiveItemIdx(null);
+
+      return;
+    }
+
     setActiveItemIdx(index);
     onActiveItemChange(index);
   };
@@ -27,9 +33,11 @@ export default function Accordion ({ items, onActiveItemChange = () => {} }: IPr
           <div
             key={idx}
             className={`${styles.accordionItem} ${idx === activeItemIdx ? 'active' : ''}`}
-            onClick={(e) => handleAccHeaderClick(e, idx)}
           >
-            <div className={styles.accordionItemHeader}>
+            <div
+              className={styles.accordionItemHeader}
+              onClick={(e) => handleAccHeaderClick(e, idx)}
+            >
               {item.header}
               <i className={styles.accordionItemHeaderIcon} />
             </div>

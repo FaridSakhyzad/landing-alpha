@@ -8,7 +8,7 @@ export default function Dashboard() {
     {
       header: (
         <h3 className={styles.dashboardContentTitle}>
-          <i className={`${styles.dashboardContentIcon} ${styles.dashboardContentIcon_dashboard}`} />
+          <i className={`accordionItemHeaderFrontIcon ${styles.dashboardContentIcon} ${styles.dashboardContentIcon_dashboard}`} />
           <span>Dashboard</span>
         </h3>
       ),
@@ -21,7 +21,7 @@ export default function Dashboard() {
     {
       header: (
         <h3 className={styles.dashboardContentTitle}>
-          <i className={`${styles.dashboardContentIcon} ${styles.dashboardContentIcon_challenges}`} />
+          <i className={`accordionItemHeaderFrontIcon ${styles.dashboardContentIcon} ${styles.dashboardContentIcon_challenges}`} />
           <span>Setup Challenges</span>
         </h3>
       ),
@@ -34,7 +34,7 @@ export default function Dashboard() {
     {
       header: (
         <h3 className={styles.dashboardContentTitle}>
-          <i className={`${styles.dashboardContentIcon} ${styles.dashboardContentIcon_invite}`} />
+          <i className={`accordionItemHeaderFrontIcon ${styles.dashboardContentIcon} ${styles.dashboardContentIcon_invite}`} />
           <span>Invite Employees</span>
         </h3>
       ),
@@ -47,7 +47,7 @@ export default function Dashboard() {
     {
       header: (
         <h3 className={styles.dashboardContentTitle}>
-          <i className={`${styles.dashboardContentIcon} ${styles.dashboardContentIcon_rewards}`} />
+          <i className={`accordionItemHeaderFrontIcon ${styles.dashboardContentIcon} ${styles.dashboardContentIcon_rewards}`} />
           <span>Setup Rewards</span>
         </h3>
       ),

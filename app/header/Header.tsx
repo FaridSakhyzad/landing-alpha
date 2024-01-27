@@ -28,7 +28,7 @@ export default function Header ({ isSandwichMenuOpen, onSandwichMenuToggle }: IP
 
           <a
             href=""
-            className={`${styles.getStartedButton} ${isSandwichMenuOpen ? styles.getStartedButton_hidden : ''}`}
+            className={`button ${styles.getStartedButton} ${isSandwichMenuOpen ? styles.getStartedButton_hidden : ''}`}
           >Get Started</a>
           <button
             onClick={handleSandwichMenuClick}
